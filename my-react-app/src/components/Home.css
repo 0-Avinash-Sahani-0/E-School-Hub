@@ -1,77 +1,196 @@
-/* Home.css */
-.home-container {
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    padding: 20px;
-    background-color: #f7f7f7;
-    color: #333;
-  }
-  
-  .header {
-    margin-bottom: 40px;
-  }
-  
-  .title {
-    font-size: 2.5rem;
-    /* color: #4CAF50; */
-    color:black;
-    margin-bottom: 10px;
-  }
-  
-  .subtitle {
-    font-size: 1.2rem;
-    color: #555;
-  }
-  
-  .features {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-  }
-  
-  .feature-card {
-    background-color: #fff;
-    padding: 20px;
-    margin: 10px;
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .feature-card h2 {
-    font-size: 1.5rem;
-    color: #4CAF50;
-  }
-  
-  .feature-card p {
-    font-size: 1rem;
-    color: #666;
-  }
-  
-  .buttons {
-    margin-top: 30px;
-  }
-  
-  .button {
-    padding: 15px 30px;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #45a049;
-  }
-  
-  .footer {
-    margin-top: 40px;
-    font-size: 0.9rem;
-    color: #777;
-  }
-  
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+  background: #FF8C00;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px; /* Adjust size of logo */
+  height: auto;
+  margin-right: 10px;
+}
+
+.navbar .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #FFD700;
+}
+
+/* Header Section */
+.logo-img {
+  position: absolute; /* Keeps the logo fixed in position */
+  top: 10px;       /* Adjust this value to position the logo vertically */
+  left: 10px;      /* Adjust this value to position the logo horizontally */
+  width: auto;     /* Maintain the aspect ratio of the image */
+  height: 50px;    /* Adjust this value to fit your desired logo size */
+  z-index: 1000;   /* Ensures the logo stays on top of other elements */
+}
+
+.header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #FF8C00, #FFB84D);
+  color: white;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header .title {
+  font-size: 3rem;
+  margin-bottom: 1px;
+  padding-top: 10%;
+  word-wrap: break-word; /* Ensures heading doesn't go out of screen */
+}
+
+.header .subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h2 {
+  color: #333;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* About Section */
+.about {
+  background: #fff;
+  border-radius: 15px;
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.about p {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 10px 0 20px;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits-list li {
+  font-size: 1.1rem;
+  color: #444;
+  margin: 8px 0;
+}
+
+/* Buttons Section */
+.buttons {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.button {
+  background: #FF8C00;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background 0.3s, transform 0.2s;
+  width: 180px;
+}
+
+.button:hover {
+  background: #FFD700;
+  transform: scale(1.05);
+}
+
+/* Footer Section */
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 30px;
+}
+
+.footer a {
+  color: #FFD700;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer a:hover {
+  color: white;
+}

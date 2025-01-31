@@ -3,7 +3,7 @@ import axios from 'axios';
 import './css-style/Register.css';
 
 const Register = () => {
-    const [form, setForm] = useState({ name: '', email: '', password: '' });
+    const [form, setForm] = useState({ name: '', email: '', password: '', number: '' });
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -28,6 +28,12 @@ const Register = () => {
                 placeholder="Email"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
+            />
+            <input
+                type="text"
+                placeholder="Mobile Number"
+                value={form.number}
+                onChange={(e)=>setForm({...form, email: e.target.value})}
             />
             <input
                 type="password"

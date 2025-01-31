@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Register from './components/Register';
 import Login from './components/Login';
 import Home from './components/Home'; // Assuming you have a Home page
+// import Academic from './components/Academic';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />           {/* Your Home page */}
           <Route path="/register" element={<Register />} /> {/* Register page */}
           <Route path="/login" element={<Login />} />       {/* Login page */}
+          {/* <Route path="/Academic" element={<Academic />} />   */}
         </Routes>
       </div>
     </Router>
