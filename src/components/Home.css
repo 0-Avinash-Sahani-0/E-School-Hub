@@ -16,6 +16,12 @@ body {
   align-items: center;
   padding: 15px 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 96.7%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 100px; /* Ensure navbar has a fixed height */
 }
 
 .navbar .logo {
@@ -24,15 +30,14 @@ body {
 }
 
 .logo-img {
-  width: 40px; /* Adjust size of logo */
+  width: 50px;
   height: auto;
   margin-right: 10px;
 }
 
-.navbar .logo {
-  font-size: 2rem;
+.logo-text {
+  font-size: 1.5rem;
   font-weight: bold;
-  letter-spacing: 2px;
 }
 
 .nav-links {
@@ -53,19 +58,16 @@ body {
   color: #FFD700;
 }
 
-/* Header Section */
-.logo-img {
-  position: absolute; /* Keeps the logo fixed in position */
-  top: 10px;       /* Adjust this value to position the logo vertically */
-  left: 10px;      /* Adjust this value to position the logo horizontally */
-  width: auto;     /* Maintain the aspect ratio of the image */
-  height: 50px;    /* Adjust this value to fit your desired logo size */
-  z-index: 1000;   /* Ensures the logo stays on top of other elements */
+/* Fix for content hidden behind navbar */
+.home-container {
+  padding-top: 550px; /* Adjusted to ensure content appears below navbar */
+  text-align: center;
 }
 
+/* Header Section */
 .header {
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
   background: linear-gradient(to right, #FF8C00, #FFB84D);
   color: white;
   border-radius: 0 0 30px 30px;
@@ -74,14 +76,11 @@ body {
 
 .header .title {
   font-size: 3rem;
-  margin-bottom: 1px;
-  padding-top: 10%;
-  word-wrap: break-word; /* Ensures heading doesn't go out of screen */
+  margin-bottom: 10px;
 }
 
 .header .subtitle {
   font-size: 1.4rem;
-  margin-bottom: 30px;
 }
 
 /* Features Section */
@@ -91,7 +90,6 @@ body {
   justify-content: center;
   gap: 20px;
   padding: 40px 20px;
-  text-align: center;
 }
 
 .feature-card {
@@ -105,18 +103,6 @@ body {
 
 .feature-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.feature-card h2 {
-  color: #333;
-  font-size: 1.7rem;
-  margin-bottom: 10px;
-}
-
-.feature-card p {
-  color: #555;
-  font-size: 1rem;
 }
 
 /* About Section */
@@ -127,18 +113,6 @@ body {
   padding: 20px;
   width: 80%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.about h2 {
-  font-size: 2.5rem;
-  color: #333;
-}
-
-.about p {
-  font-size: 1.2rem;
-  color: #555;
-  margin: 10px 0 20px;
 }
 
 .benefits-list {
@@ -146,13 +120,7 @@ body {
   padding: 0;
 }
 
-.benefits-list li {
-  font-size: 1.1rem;
-  color: #444;
-  margin: 8px 0;
-}
-
-/* Buttons Section */
+/* Buttons */
 .buttons {
   text-align: center;
   margin: 30px 0;
@@ -168,7 +136,6 @@ body {
   cursor: pointer;
   margin: 0 10px;
   transition: background 0.3s, transform 0.2s;
-  width: 180px;
 }
 
 .button:hover {
@@ -176,21 +143,11 @@ body {
   transform: scale(1.05);
 }
 
-/* Footer Section */
+/* Footer */
 .footer {
   background: #333;
   color: white;
   text-align: center;
   padding: 15px 10px;
   margin-top: 30px;
-}
-
-.footer a {
-  color: #FFD700;
-  text-decoration: none;
-  margin: 0 5px;
-}
-
-.footer a:hover {
-  color: white;
 }
