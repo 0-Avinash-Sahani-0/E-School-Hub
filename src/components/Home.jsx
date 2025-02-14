@@ -1,7 +1,8 @@
 import React, { useState } from 'react'; 
 import { Link } from 'react-router-dom';
 // import logo from '../images_icons/kindergarten.png';
-import './Home.css';
+import './css-style/Home.css';
+import Navbar from './Navbar';
 
 
 function Home() {
@@ -14,16 +15,17 @@ function Home() {
         <div className="logo">
         <img src="/src/images_icons/kindergarten.png" alt="E School Hub Logo" className="logo-img" />
         </div>
+        <h2 className="logo">E-School Hub</h2>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
           &#9776;
         </button>
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/courses">Courses</Link></li>
-          <li><Link to="/profile">Profile</Link></li>
-          <li><Link to="/results">Results</Link></li>
-          <li><Link to="/store">Store</Link></li>
-          <li><Link to="/help">Help</Link></li>
+          <li><Link to="/Academic">Courses</Link></li>
+          <li><Link to="/Profile">Profile</Link></li>
+          <li><Link to="/Result">Results</Link></li>
+          <li><Link to="/Store">Store</Link></li>
+          <li><Link to="/Help">Help</Link></li>
         </ul>
       </nav>
 
@@ -76,11 +78,7 @@ function Home() {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="footer">
-        <p>&copy; 2025 E School Hub. Learning made fun and secure.</p>
-        <p>Follow us: <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a></p>
-      </footer>
+    
     </>
   );
 }

@@ -121,16 +121,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Footer Styling */
-.footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
 
 /* Animations */
 @keyframes fadeInDown {

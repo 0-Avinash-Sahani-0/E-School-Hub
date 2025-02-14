@@ -9,7 +9,7 @@ body {
 
 /* Navbar Styling */
 .navbar {
-  background: #FF8C00;
+  background: #8533ff;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -17,12 +17,13 @@ body {
   padding: 15px 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: fixed;
-  width: 96.7%;
+  width: 95.7%;
   top: 0;
   left: 0;
   z-index: 1000;
-  height: 100px; /* Ensure navbar has a fixed height */
+  height: 60px; /* Ensure navbar has a fixed height */
 }
+
 
 .navbar .logo {
   display: flex;
@@ -49,25 +50,25 @@ body {
 .nav-links li a {
   color: white;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 500;
   transition: color 0.3s;
 }
 
 .nav-links li a:hover {
-  color: #FFD700;
+  color: #0ee10b;
 }
 
 /* Fix for content hidden behind navbar */
 .home-container {
-  padding-top: 550px; /* Adjusted to ensure content appears below navbar */
+  padding-top: 700px; /* Adjusted to ensure content appears below navbar */
   text-align: center;
 }
 
 /* Header Section */
 .header {
   text-align: center;
-  padding: 80px 20px;
+  padding: 80px 300px;
   background: linear-gradient(to right, #FF8C00, #FFB84D);
   color: white;
   border-radius: 0 0 30px 30px;
@@ -143,11 +144,48 @@ body {
   transform: scale(1.05);
 }
 
-/* Footer */
-.footer {
-  background: #333;
+/* Basic styling for the menu toggle button */
+.menu-toggle {
+  background-color: #333;
   color: white;
-  text-align: center;
-  padding: 15px 10px;
-  margin-top: 30px;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Styling for the navigation menu */
+.menu {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Show the menu when it's open */
+.menu.open {
+  display: block;
+}
+
+/* Styling for the menu items */
+.menu ul {
+  background-color: #444;
+  padding: 0;
+}
+
+.menu li {
+  border-bottom: 1px solid #555;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+}
+
+.menu li a:hover {
+  background-color: #555;
 }

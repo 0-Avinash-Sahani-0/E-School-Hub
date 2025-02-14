@@ -19,8 +19,8 @@ const Academic = () => {
         1: ["Basic Math", "English Grammar", "EVS"],
         2: ["Math Fundamentals", "Story Writing", "General Science"],
         3: ["Advanced Math", "Creative Writing", "Social Studies"],
-        4: ["Fractions", "Reading Comprehension", "Geography"],
-        5: ["Geometry", "Essay Writing", "Physics Basics"],
+        4: ["Fractions", "Reading Comprehension", "Geography", "Science Experiments", "Logical Reasoning"],
+        5: ["Geometry", "Essay Writing", "Physics Basics", "Coding Fundamentals", "Astronomy"],
     };
 
     const handleEnroll = (course) => {
@@ -30,26 +30,13 @@ const Academic = () => {
 
     return (
         <>
-            {/* Navbar */}
-            <nav className="navbar">
-                <div className="logo">E School Hub</div>
-                <ul className="nav-links">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/academic">Courses</Link></li>
-                    <li><Link to="/profile">Profile</Link></li>
-                    <li><Link to="/results">Results</Link></li>
-                    <li><Link to="/store">Store</Link></li>
-                    <li><Link to="/help">Help</Link></li>
-                </ul>
-            </nav>
-
-            {/* Academic Courses Section */}
             <div className="courses-page">
                 <h1>Explore Academic Courses</h1>
                 <p className="description">
                     Select your grade and start learning with fun and engaging materials designed for kids.
                 </p>
 
+                {/* Grade Selector */}
                 <div className="grade-selector">
                     <label htmlFor="grade">Select Grade: </label>
                     <select id="grade" value={grade} onChange={(e) => setGrade(e.target.value)}>
@@ -61,20 +48,27 @@ const Academic = () => {
                     </select>
                 </div>
 
+                {/* Course List */}
                 <div className="course-list">
                     {courses[grade].map((course, index) => (
                         <div key={index} className="course-card">
+                            <img src={`./images/${course.replace(/\s+/g, "").toLowerCase()}.jpg`} alt={course} className="course-img"/>
                             <h3>{course}</h3>
                             <button onClick={() => handleEnroll(course)}>Enroll</button>
                         </div>
                     ))}
                 </div>
+
+                {/* Additional Learning Resources */}
+                <div className="learning-section">
+                    <h2>Enhance Your Learning</h2>
+                    <p>Explore additional resources, quizzes, and interactive activities to make learning fun!</p>
+                    <img src="./images/learning.png" alt="Learning Resources" className="learning-img"/>
+                </div>
             </div>
 
-            {/* Footer */}
-            <footer className="footer">
-                <p>© 2025 E School Hub. All rights reserved.</p>
-            </footer>
+            
+           
         </>
     );
 };
