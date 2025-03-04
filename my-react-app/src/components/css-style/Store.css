@@ -1,0 +1,157 @@
+/* ✅ Global Page Layout Fix */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ✅ Fix Header Overlapping Content */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  width: 100%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Ensures Content Grows Dynamically */
+.main-content {
+  flex: 1;
+  width: 100%;
+  padding-bottom: 50px; /* Prevents content from cutting off */
+  position: relative;
+  overflow-y: auto;
+}
+
+/* ✅ Store Container (Fixes Content Cutoff) */
+.store-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ✅ Store Grid Layout (Responsive) */
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ✅ Responsive Grid for Tablets & Mobile */
+@media (max-width: 900px) {
+  .store-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .store-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* ✅ Store Item Styling */
+.store-item {
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 280px;
+  text-align: center;
+}
+
+.store-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ✅ Image & Text Styling */
+.store-image {
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.store-item-name {
+  font-size: 1.3rem;
+  margin: 12px 0;
+  color: #222;
+}
+
+.store-item-price {
+  font-size: 1.1rem;
+  color: #ff5722;
+  font-weight: bold;
+}
+
+.store-item-desc {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* ✅ Buttons */
+.store-button {
+  background: #4CAF50;
+  color: white;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.store-button:hover {
+  background: #388E3C;
+}
+
+.purchase {
+  background: #FF9800;
+}
+
+.purchase:hover {
+  background: #F57C00;
+}
+
+/* ✅ Cart Container Fix */
+.cart-container {
+  position: relative;
+  margin-top: 20px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  min-height: 100px;
+  overflow-y: auto; /* Enables scrolling */
+  max-height: 300px; /* Prevents cart from pushing content out */
+}
+
+/* ✅ Footer Fix */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  margin-top: auto;
+  position: relative;
+  bottom: 0;
+}

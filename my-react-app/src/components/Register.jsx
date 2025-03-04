@@ -8,7 +8,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:5000/api/auth/register', form);
+            const res = await axios.post('http://localhost:8080/api/auth/register', form);
             alert(res.data.message);
         } catch (err) {
             alert(err.response.data.error);
@@ -29,12 +29,7 @@ const Register = () => {
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
             />
-            <input
-                type="text"
-                placeholder="Mobile Number"
-                value={form.number}
-                onChange={(e)=>setForm({...form, email: e.target.value})}
-            />
+           
             <input
                 type="password"
                 placeholder="Password"
