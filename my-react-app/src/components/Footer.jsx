@@ -33,7 +33,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <br/>
 
       {/* Footer Bottom */}
       <div className="footer-bottom">
