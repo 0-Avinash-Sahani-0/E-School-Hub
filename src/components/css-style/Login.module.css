@@ -1,0 +1,188 @@
+/* Container Styling */
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fceabb, #f8b500);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Logo and Welcome Section */
+.infoBox {
+    text-align: center;
+    margin-bottom: 25px;
+    animation: slideDown 1s ease-out;
+}
+
+.logo {
+    height: 80px;
+    margin-bottom: 10px;
+    animation: float 3s ease-in-out infinite;
+}
+
+h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.quote {
+    font-style: italic;
+    color: #6c757d;
+    font-size: 16px;
+}
+
+/* Form Styling */
+.loginForm {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    animation: slideUp 1s ease-in-out;
+}
+
+.loginInput {
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 90%;
+}
+
+.loginInput:focus {
+    border-color: #ffa500;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+
+/* Button */
+.loginButton {
+    background-color: #ff9800;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.loginButton:hover {
+    background-color: #fb8c00;
+    transform: scale(1.02);
+}
+
+.forgotBtn {
+    margin-top: 10px;
+    background: none;
+    border: none;
+    color: #007BFF;
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.forgotBtn:hover {
+    color: #0056b3;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+
+/* Dialog Box Styling */
+.dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.dialog h2 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.dialogInput {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.dialogInput:focus {
+    border-color: #ffa500;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+
+.dialogButton {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 5px;
+}
+
+.dialogButton:hover {
+    background-color: #0056b3;
+}
+
+/* Overlay for the Dialog */
+.dialogOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    animation: fadeIn 0.3s ease-in-out;
+}

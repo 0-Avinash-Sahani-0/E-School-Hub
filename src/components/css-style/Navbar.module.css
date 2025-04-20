@@ -1,0 +1,128 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #1e88e5, #42a5f5);
+  padding: 0.8rem 1.5rem;
+  color: white;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.logoImg {
+  height: 6vh;
+  width: 6vh;
+  animation: rotateLogo 5s linear infinite;
+}
+
+.logo h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+.navLinks li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.navLinks li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  left: 0;
+  bottom: 0;
+  transition: 0.4s ease;
+}
+
+.navLinks li a:hover {
+  color: #ffe082;
+}
+
+.navLinks li a:hover::after {
+  width: 100%;
+}
+
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger Animation when active */
+.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menuToggle {
+    display: flex;
+  }
+
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    background: #1e88e5;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    z-index: 5;
+  }
+
+  .navLinks.active {
+    display: flex;
+  }
+
+  .logo {
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 0.5rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

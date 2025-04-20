@@ -1,0 +1,41 @@
+/* Container Styling */
+.logoutContainer {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.logoutTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Button Styling */
+.logoutButton {
+  padding: 0.6rem 1.2rem;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease;
+  font-size: 1rem;
+}
+
+/* Hover & Active Effects */
+.logoutButton:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+.logoutButton:active {
+  background-color: #a30000;
+  transform: scale(1);
+}

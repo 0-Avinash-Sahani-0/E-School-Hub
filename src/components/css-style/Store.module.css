@@ -1,0 +1,155 @@
+.storeContainer {
+  padding: 2rem;
+  background: linear-gradient(to right, #1addf2, #1ff5c3);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.storeTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1e40af;
+  margin-bottom: 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.storeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.storeItem {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: transform 0.3s;
+}
+
+.storeImage {
+  width: 100%;
+  border-radius: 10px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.storeItemName {
+  font-size: 1.2rem;
+  color: #1e3a8a;
+  margin: 0.5rem 0;
+}
+
+.storeItemPrice {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.storeItemDesc {
+  font-size: 0.9rem;
+  color: #475569;
+  margin-bottom: 0.8rem;
+}
+
+.storeButton {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.storeButton:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+.purchase {
+  background-color: #10b981;
+}
+
+.purchase:hover {
+  background-color: #059669;
+}
+
+.cartContainer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f1f5f9;
+  border-radius: 12px;
+  color: #1f2937;
+}
+
+.cartContainer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cartContainer li {
+  margin-bottom: 8px;
+}
+
+.cartBuyButton {
+  margin-left: 10px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cartBuyButton:hover {
+  background-color: #059669;
+}
+
+.searchInput {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px 12px;
+  margin: 10px 0 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.purchaseAllButton {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.purchaseAllButton:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .storeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .storeButton {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .cartContainer {
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

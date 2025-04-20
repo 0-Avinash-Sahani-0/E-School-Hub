@@ -1,0 +1,134 @@
+/* Container Styling */
+.registerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    background: linear-gradient(135deg, #fceabb, #f8b500);
+    animation: fadeIn 1s ease-in-out;
+    border-radius: 15px;
+}
+
+/* Logo and Welcome Section */
+.infoBox {
+    text-align: center;
+    margin-bottom: 25px;
+    animation: slideDown 1s ease-out;
+}
+
+.logo {
+    height: 80px;
+    margin-bottom: 10px;
+    animation: float 3s ease-in-out infinite;
+}
+
+h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.quote {
+    font-style: italic;
+    color: #7f8c8d;
+    font-size: 16px;
+}
+
+/* Form Styling */
+.form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    animation: slideUp 1s ease-in-out;
+}
+
+.inputField {
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 92%;
+}
+
+.inputField:focus {
+    border-color: #00bcd4;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+}
+
+/* Buttons */
+.button, .loginBtn {
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.button {
+    background-color: #00b894;
+    color: white;
+    border: none;
+}
+
+.button:hover {
+    background-color: #019875;
+    transform: scale(1.02);
+}
+
+.loginBtn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.loginBtn:hover {
+    background-color: #45a049;
+    transform: scale(1.02);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .form {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .quote {
+        font-size: 14px;
+    }
+}

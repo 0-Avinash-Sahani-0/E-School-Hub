@@ -1,0 +1,319 @@
+.academicContainer {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #1addf2, #1ff5c3);
+  padding: 2rem;
+  min-height: 100vh;
+  min-width: 100vh;
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.siteTitle {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  animation: popIn 0.6s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Animated Title */
+.animatedTitle {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.introText {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Dropdown selectors */
+.selectorRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  font-weight: 500;
+  color: #333;
+}
+
+.selectorRow select {
+  padding: 0.5rem 1rem;
+  border: 2px solid #0077cc;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #333;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.selectorRow select:hover {
+  background-color: #eaf6ff;
+}
+
+/* Video section */
+.videoSection {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 102, 204, 0.15);
+  animation: slideUp 0.6s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.videoPlayer {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons */
+.videoControls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.videoControls button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.videoControls button:hover {
+  background: #005bb5;
+}
+
+/* Icons */
+.iconsRow {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #007bff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  color: #004d99;
+}
+
+/* Notes Section */
+.notesSection {
+  margin-top: 2rem;
+  animation: fadeIn 0.6s ease;
+}
+
+.notesSection h3 {
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.notesSection textarea {
+  width: 100%;
+  height: 150px;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.notesSection button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.notesSection button:hover {
+  background-color: #1c7c32;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .videoControls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .selectorRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .icon {
+    font-size: 1.6rem;
+  }
+
+  .notesSection textarea {
+    height: 120px;
+  }
+}
+.videoPlayerSmall {
+  width: 90%; /* Takes 90% of the parent's width */
+  max-width: 600px; /* Ensures it doesn't exceed 600px */
+  height: auto; /* Maintains aspect ratio */
+  border: 3px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Centers it horizontally */
+  display: block; /* Ensures it's treated as a block-level element */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .videoPlayerSmall {
+    width: 95%; /* Adapts to a narrower screen */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .videoPlayerSmall {
+    border-width: 2px; /* Reduce border size for very small screens */
+  }
+}
+
+.notesToggleBtn {
+  margin-left: auto;
+  margin-right: 20px;
+  background: #f2a33c;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 14px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.notesPopup {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 16px;
+  padding: 10px;
+  width: 300px;
+  height: 250px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+}
+
+.notesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.notesHeader button {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+
+.notesArea {
+  margin-top: 2rem;
+}
+
+.notesArea h3 {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.notesArea textarea {
+  width: 100%;
+  height: 120px;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  margin-top: 0.5rem;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .notesPopup {
+    width: 90%;
+    height: 200px;
+    bottom: 60px;
+    right: 10px;
+  }
+  .notesHeader {
+    font-size: 1.2rem;
+  }
+
+  .notesArea textarea {
+    height: 100px;
+  }
+}
+
+.centeredSelectors {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.profilePhoto {
+  display: block;
+  margin: 10px auto;
+}
+

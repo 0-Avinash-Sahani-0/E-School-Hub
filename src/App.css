@@ -1,42 +1,38 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* ✅ Ensure full height layout */
+html, body, #root {
+  height: 0;
+  margin: 0px;
+  padding: 0px;
+  display: block; /* Prevent layout issues */
+  /* background:linear-gradient(to right, #ff7e5f, #feb47b); Gradient background */
+}
+
+/* ✅ Ensure content takes full space */
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between; /* Push footer down */
+}
+
+.content {
+  flex: 1;
+  padding: 0px;
+  min-height: 30vh; /* Ensures content is enough to push footer */
+}
+
+footer {
+  background: #222;
+  color: white;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  padding: 10px 15px;
+  width: 100%;
+  font-size: 0.8rem;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  position: relative; /* Ensure proper placement */
 }

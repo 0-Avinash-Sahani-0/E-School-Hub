@@ -1,0 +1,100 @@
+.profileContainer {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+  background: linear-gradient(to right, #1addf2, #1ff5c3);
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profileTitle {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #3366cc;
+}
+
+.profileImageSection {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.profileImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4bc0c0;
+  transition: transform 0.3s ease;
+}
+
+.profileImage:hover {
+  transform: scale(1.05);
+}
+
+.profileDetails {
+  margin-bottom: 1.5rem;
+}
+
+.profileField {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.8rem;
+}
+
+.profileLabel {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.profileText {
+  font-size: 1rem;
+  color: #444;
+  background: #f2f2f2;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.profileInput {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.profileButtonContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.profileButton,
+.generateButton {
+  background-color: #36b9fa;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.profileButton:hover,
+.generateButton:hover {
+  background-color: #09ea81;
+}
